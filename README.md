@@ -1,5 +1,5 @@
 # K3S
-Okay, so this is a short guide of k3s (mostly for me to have certain commands written down somewhere). [K3S](https://docs.k3s.io/) is the lightweight option of kubernetes. There are many-many different ways of setting your cluster, though.
+Okay, so this is a short guide of k3s (mostly for me to have certain commands written down somewhere). [K3S](https://docs.k3s.io/) is lightweight kubernetes. There are many-many different ways of setting your cluster, though.
 
 ## What is a cluster?
 A cluster is a group of similar things, people, or units gathered or occurring closely together. In the context of kubernetes, a cluster is a group of nodes (individual servers) that are connected with each other. Kubernetes runs your application containers in so called pods, a pod can have one or more containers.
