@@ -44,7 +44,7 @@ kubectl -n <namespace> delete pod data-mover
 ### Storage in a cluster
 Since the idea is that your system should survive a node going down, even if you have a replica of the app running on the surviving node, this doesn't necessarily save you (unless you run a container that doesn't need persistant storage). Say you have nodes A and B, both nodes run replicas of your app, the persistent volume sits on node A. Something happens and node A goes down, the app continues running thanks to node B, but it no longer has access to it's storage and will likely crash.
 
-This is where distributed block storage providers come in. I will take [Longhorn](https://longhorn.io/) as an example. Longhorn can combine the disk of all your nodes into one. You get the benefits of:
+This is where distributed block storage providers come in. I will take [Longhorn](https://longhorn.io/) as an example. Longhorn can pratically combine the disk of all your nodes into one, the data will still be stored on your individual disks, but the engine will manage that for you, on a higher level of abstraction you can look at it as having one bigger bucket of storage. You get the benefits of:
 - having more usable storage
 - having disaster recovery from a node going completely offline (longhorn puts replicas of the pv on both nodes)
 
